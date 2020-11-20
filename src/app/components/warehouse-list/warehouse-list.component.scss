@@ -1,0 +1,64 @@
+@mixin flex-col {
+    display:flex;
+    justify-content: space-around;
+    align-items:center ;
+    flex-direction: column;
+}
+@mixin  flex-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    .filter{
+        height: 10vh;
+        @include flex-row();
+    }
+    .list{
+        padding: 0;
+        margin: 0;
+        height: 90vh;
+        width: 100%;
+        @include flex-row();
+        .card-main{
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            .card{
+                margin-left: 25px;
+                height: 10em;
+                width: 9em;
+                background-color: #659dbd; 
+                @include flex-col();
+                color: white;
+                .name{
+                    font-size: 17px;
+                    font-weight: 700;
+                    text-decoration: underline;
+                }
+                .space_available{
+                    color:orange;
+                }
+                .image{
+                    img{
+                        height: 80px;
+                        width: 130px
+                    }
+                }
+                &:hover{
+                    transform: scale(1.05);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+router-outlet{
+    margin: 0;
+    padding: 0;
+}

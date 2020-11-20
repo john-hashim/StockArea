@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stockarea"
+    }
+  },
+  "defaultProject": "stockarea",
+  "cli": {
+    "analytics": false
+  }
 }

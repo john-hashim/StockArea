@@ -1,0 +1,76 @@
+<div class="wrapper" >
+    <button routerLink="/warehouse-list">Back To List</button>
+        <div class="details-main" *ngFor="let item of data">
+            <div class="status">
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <div class="city">
+                    Current Location:{{item.city}}
+                </div>
+                <div class="live-class">
+                    <div>
+                        Live Status:{{ item.is_live}}
+                    </div>
+                    <div [ngClass]="{'display-true': blink, 'display-false': !blink}">
+                        <div class="live_status" [ngClass]="{'live': is_live, 'not-live': !is_live}">
+                        
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button>Talk To An Expert</button>
+                </div>
+            </div>
+            <div class="images">
+                <div class="space">
+                    <div class="heading">
+                        Space Available
+                    </div>
+                    <div class="box">
+                        <div class="box-image">
+                            <div class="box1"></div>
+                            <div class="box2"></div>
+                            <div class="box3"></div>
+                        </div>
+                        <div class="box-values">
+                            {{item.space_available}} space available
+                        </div>
+                    </div>
+                    <div class="cluster">
+                        {{item.cluster}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+    <!-- <div class="update-list" [hidden]=true>
+        <div class="name">
+            <label for="name">name</label>
+            <input type="text" name="name" >
+        </div>
+        <div class="city">
+            <label for="city">City</label>
+            <input type="text" name="city" >
+        </div>
+        <div class="live_status">
+            <label for="live">Live Status</label>
+            <select name="" id="">
+                <option value="true">true</option>
+                <option value="false">false</option>
+            </select>
+        </div>
+        <div class="space_available">
+            <label for="space_available">space Available</label>
+            <input type="number" name="space" >
+        </div>
+        <div class="cluster">
+            <label for="cluster">Cluster</label>
+            <input type="cluster" name="Cluster" >
+        </div>
+        <div>
+            <button class="btn" (click)="updateList()">Update list</button>
+            <button class="btn" (click)="cancelUpdate()">Cancel Update</button>
+        </div>
+    </div> -->
+</div>

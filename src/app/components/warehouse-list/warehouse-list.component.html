@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <div class="filter">
+         <div class="select">
+             <label for="city">Select your City</label>
+            <select name="city" id="city" [(ngModel)]="selectedCity" (change)="onChangeCity()">
+                <option value="all">All</option>
+                <option *ngFor="let item of listOfCity" [value]="item">{{item}}</option>
+            </select>
+         </div>
+         <div class="select">
+            <label for="city">Select your space</label>
+            <select name="Spcae" id="space_available" [(ngModel)]="selectedSpace" (change)="onChangeSpace()">
+                <option value="all">All</option>
+                <option *ngFor="let item of listOfSpace" [value]="item"> &#60;{{item}}</option>
+            </select>
+         </div>
+         <div class="select">
+            <label for="city">Select your cluster</label>
+            <select name="cluster" id="cluster" [(ngModel)]="selectedCluster" (change)="onChangeCluster()">
+                <option value="all">All</option>
+                <option *ngFor="let item of listOfCluster" [value]="item">  {{item}}</option>
+            </select>
+         </div>
+    </div>
+    <div class="list">
+        <div class="card-main">
+            <div *ngFor="let item of wareHouseList" (click)="onSelect(item)" class="card" routerLink="/warehouse-details">
+                <div class="image">
+                    <img src="../../../assets/4O5A8403_rdax_65.jpg" alt="">
+                </div>
+                <div class="name">
+                    {{item.name}}
+                </div>
+                <div class="city">
+                    City: {{item.city}}
+                </div>
+                <div class="space_available">
+                    Spcae:{{item.space_available}}
+                </div>
+                <div class="cluster">
+                    {{item.cluster}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

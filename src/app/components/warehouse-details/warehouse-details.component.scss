@@ -1,0 +1,224 @@
+.wrapper{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+button{
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+.details-main{
+    height: 80%;
+    width: 80%;
+    background-color: #659dbd; 
+    display: flex;
+    .status{
+        width: 50%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        .name{
+            font-size: 35px;
+        }
+        .city{
+            font-size: 30px;
+        }
+        .live-class{
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 60%;
+        }
+    }
+    .images{
+        width: 50%;
+        color: white;
+        display: flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .space{
+            .heading{
+                margin-top: 25px;
+                font-size: 25px;
+            }
+            .box{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 100%;
+                .box-image{
+                    margin-top: 25px;
+                    width: 60px;
+                    height: 120px;
+                    border-color: black;
+                    border-style: solid;
+                    border-radius: 2px;
+                    &div{
+                        height: 33%;
+                    }
+                }
+                .box-values{
+                    font-size: 25px;
+                }
+            }
+            .cluster{
+                padding-top: 50px;
+                font-size: 35px;
+                font-weight: 700;
+                color: yellow;
+                text-shadow: 0px 1px 5px black;
+            }
+        }
+    }
+}
+.live{
+    background-color: green;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.not-live{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+.display-true{
+    display: none;
+}
+.display-false{
+    display: block;
+}
+@media (max-width:756px){
+    button{
+        padding: 5px 15px;
+        margin-top: 25px;
+    }
+    .details-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .status{
+            .name{
+                font-size: 20px;
+            }
+            .city{
+                font-size: 15px;
+                margin-top: 15px;
+            }
+            .live-class{
+                font-size: 15px;
+                margin-top: 15px;
+            }
+        }
+        .images{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .space{
+                .heading{
+                    margin-top: 10px;
+                    font-size: 15px;
+                }
+                .box{
+                    width: 100%;
+                    .box-image{
+                        margin-top: 25px;
+                        &div{
+                            height: 33%;
+                        }
+                    }
+                    .box-values{
+                        font-size: 10px;
+                    }
+                }
+                .cluster{
+                    padding-top: 30px;
+                }
+            }
+        }
+    }
+}
+.update-list{
+    height: 80%;
+    width: 50%;
+    background-color: #659dbd; 
+    display: flex;
+    flex-direction: column;
+    .live_status{
+        select{
+            width: 90%;
+            padding: 10px 15px;
+            box-sizing: border-box;
+            option{
+                width: 90%;
+                padding: 15px 22px;
+                box-sizing: border-box;
+            }
+        }
+    }
+    div{
+        margin-top: 15px;
+    }
+}    
+.btn{
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: orange;
+    border-radius: 25px;
+    outline: none;
+    border: none;
+}
+input{
+    width: 93%;
+    padding: 10px 15px;
+    margin: 10px 5px;
+    box-sizing: border-box;  
+}
+label{
+    margin-top: 50px;
+}
+@media (max-width:756px){
+    .update-list{
+        height: 80%;
+        width: 80%;
+        background-color: #659dbd; 
+        display: flex;
+        flex-direction: column;
+        .live_status{
+            select{
+                width: 90%;
+                padding: 7px 11px;
+                option{
+                    width: 90%;
+                    padding: 7px 11px;
+                }
+            }
+        }
+        div{
+            margin-top: 10px;
+        }
+    }    
+    input{
+        width: 90%;
+        padding: 7px 11px;  
+    }
+}

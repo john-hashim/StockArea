@@ -1,0 +1,88 @@
+@mixin flex-col {
+    display:flex;
+    justify-content: space-around;
+    align-items:center ;
+    flex-direction: column;
+}
+@mixin  flex-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.body{
+    background-color: white;
+}
+.title{
+    // text-shadow:0px 1px 5px black;
+    font-size: 50px;
+    text-align: center;
+    height: 10vh;
+    padding-top: 1.5em;
+    font-weight: 700;
+    color: Black;
+}
+.wrapper{
+    height: 90vh;
+    width: 100%;
+    @include flex-row();
+}
+.warehouse{
+    height: 50%;
+    width: 40%;
+    @include flex-col();
+    background-color: #659dbd;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    transition-property: padding-top,padding-bottom,font-size,transform;
+    transition-duration: .5s;
+
+    p{
+        font-size: 30px;
+        text-align: center;
+        color: white;
+    }
+    button{
+        padding: 10px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 25px;
+        outline: none;
+        border: none;
+    }
+}
+.warehouse:hover{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    transform: scale(1.02);
+    box-shadow: 0 1px 5px black;
+}
+@media (max-width:756px){
+    .wrapper{
+        @include flex-col();
+    }
+    .warehouse{
+        height: 35%;
+        width: 80%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        transition: none;
+        p{
+            font-size: 15px;
+        }
+    }
+    .warehouse:hover{
+        padding-top: 25px;
+        padding-bottom: 25px;
+        transform: scale(1);
+        box-shadow: 0 1px 5px black;
+    }
+    .title{
+        font-size: 25px;
+        padding-top: 1em;
+    }
+}
+.scroll{
+    height: 100vh;
+    background-color: yellow;
+}
